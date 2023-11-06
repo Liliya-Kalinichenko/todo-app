@@ -20,8 +20,12 @@ export const TodoList: React.FC<Props> = ({ todos }) => {
 
       {tempTodo && (
         <div data-cy="Todo" className="todo">
-          <label className="todo__status-label">
+          <label
+            className="todo__status-label"
+            htmlFor="status"
+          >
             <input
+              id="status"
               data-cy="TodoStatus"
               type="checkbox"
               className="todo__status"

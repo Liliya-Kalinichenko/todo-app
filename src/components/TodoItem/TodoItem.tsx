@@ -40,7 +40,7 @@ export const TodoItem: React.FC<Props> = ({ todo }) => {
       } else {
         removeTodo(id);
       }
-    } 
+    }
 
     setIsEditingMode(false);
   };
@@ -67,8 +67,12 @@ export const TodoItem: React.FC<Props> = ({ todo }) => {
       onMouseLeave={() => setIsHover(false)}
       onDoubleClick={() => setIsEditingMode(true)}
     >
-      <label className="todo__status-label">
+      <label
+        className="todo__status-label"
+        htmlFor={`status-${id}`}
+      >
         <input
+          id={`status-${id}`}
           data-cy="TodoStatus"
           type="checkbox"
           className="todo__status"

@@ -104,7 +104,7 @@ export const TodosProvider: React.FC<Props> = ({ children }) => {
 
   const toggleTodo = (
     toggledTodo: Todo,
-    completedStatus: boolean = toggledTodo.completed,
+    completedStatus = toggledTodo.completed,
   ) => {
     setLoadingMap(prevMap => ({
       ...prevMap,
